@@ -1,7 +1,6 @@
 package com.yuwei.customer;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,9 +11,9 @@ import java.util.Optional;
 public class CustomerJDBCDateAccessService implements CustomerDao {
 
     private final JdbcTemplate jdbcTemplate;
-    private final customerRowMapper customerRowMapper;
+    private final CustomerRowMapper customerRowMapper;
 
-    public CustomerJDBCDateAccessService(JdbcTemplate jdbcTemplate, com.yuwei.customer.customerRowMapper customerRowMapper) {
+    public CustomerJDBCDateAccessService(JdbcTemplate jdbcTemplate, CustomerRowMapper customerRowMapper) {
         this.jdbcTemplate = jdbcTemplate;
         this.customerRowMapper = customerRowMapper;
     }
