@@ -114,7 +114,7 @@ public class CustomerJDBCDateAccessService implements CustomerDao {
             String sql = "update customer set email = ? where id = ?";
             int result = jdbcTemplate.update(
                     sql,
-                    update.getName(),
+                    update.getEmail(),
                     update.getId()
             );
             System.out.println("update customer set email result = " + result);
