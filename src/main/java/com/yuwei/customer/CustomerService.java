@@ -15,6 +15,7 @@ public class CustomerService {
     }
 
     public List<Customer> getAllCustomers() {
+
         return customerDao.selectAllCustomers();
     }
 
@@ -52,7 +53,8 @@ public class CustomerService {
         customerDao.deleteCustomerById(customerId);
     }
 
-    public void updateCustomer(Integer customerId, CustomerUpdateRequest updateRequest) {
+    public void updateCustomer(Integer customerId,
+                               CustomerUpdateRequest updateRequest) {
         Customer customer = getCustomer(customerId);
 
         boolean changes = false;
